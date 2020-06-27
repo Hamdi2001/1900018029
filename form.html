@@ -3,14 +3,15 @@
 <head>
 	<title>Form Pendataan penduduk</title>
 </head>
-<body>
+<body bgcolor="#E2C5B6">
+<form action="form.php" method="post" style="float: left;">
 	<pre/>
 	Nama Anda : 
 	<input type="text" name="nama">
 	<br/>
 
 	Alamat : 
-	<input type="text" name="alamar">
+	<input type="text" name="alamat">
 	<br/>
 
 	No.Telpon/HP : 
@@ -18,12 +19,12 @@
 	<br/>
 
 	Jenis Kelamin :
-	<input type="radio" name="jenis" value="Laki-laki">Laki-laki
-	<input type="radio" name="jenis" value="Perempuan">Perempuan
+	<input required type="radio" name="jenis" value="Laki-laki">Laki-laki
+	<input required type="radio" name="jenis" value="Perempuan">Perempuan
 	<br/>
 
 	Agama: 
-	<select>
+	<select name="agama">
 		<option>Islam</option>
 		<option>Protestan</option>
 		<option>Katolik</option>
@@ -32,17 +33,11 @@
 	</select>
 	<br/>
 
-	Pekerjaan :
-	<input type="checkbox" name="pengusaha">Pengusaha
-	<input type="checkbox" name="pegawa_swasta">Pegawai Swasta
-	<input type="checkbox" name="pegawa_negeri">Pegawai Negeri
-	<input type="checkbox" name="lainnya">Lainnya
-	<br/>
-
 	Jelaskan Keadaan Anda:
-	<textarea name="Keadaan"></textarea>
+	<textarea style="resize: none;" name="keadaan"></textarea>
 	<br/>
 
-	<input type="submit" value="Simpan">
+	<input type="submit" value="Simpan" name="submit">
+</form>
 </body>
 </html>

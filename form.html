@@ -1,43 +1,119 @@
 <!DOCTYPE html>
+<style type="text/css">
+	body{
+		background-image: url("latar.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		font-family: "Lucida Console", Courier, monospace;
+	}
+	#tabel{
+		line-height: 25px; 
+		border-radius: 10px;
+		background-color: grey;
+		border-color: grey;
+		border-style: outset;
+		color: black;
+		width: 800px;
+		height: 370px;
+		margin: 100px auto;
+		padding-left: 5px;
+	}
+	#tombol{
+		background: linear-gradient(red, white);
+		width: 150px;
+		border-radius: 5px;
+	}
+
+</style>
+
 <html>
 <head>
 	<title>Form Pendataan penduduk</title>
 </head>
-<body bgcolor="#E2C5B6">
+<body>
+	<h1 align="center">FORM PENDATAAN PENDUDUK</h1>	
+	<div id="tabel">
 <form action="form.php" method="post" style="float: left;">
-	<pre/>
-	Nama Anda : 
-	<input type="text" name="nama">
-	<br/>
+	<table cellpadding="0" cellspacing="0">
+		<h1 align="center">&emsp;Pendataan Penduduk</h1>
+		<tr>
+			<td>NIK</td>
+			<td><input type="text" name="nik"></td>
+		</tr>
 
-	Alamat : 
-	<input type="text" name="alamat">
-	<br/>
+		<tr>
+			<td>Nama</td>
+			<td><input type="text" name="nama"></td>
+		</tr>
 
-	No.Telpon/HP : 
-	<input type="number" name="nomor">
-	<br/>
+		<tr>
+			<td>Tempat/Tanggal Lahir</td>
+			<td><input type="text" name="tempat" placeholder="Tempat, mm/dd/yyyy"></td>
+			<td>&emsp;&emsp;&emsp;&emsp;</td>
+			<td>Gol. Darah</td>
+			<td><input type="text" name="gol"></td>
+		</tr>
 
-	Jenis Kelamin :
-	<input required type="radio" name="jenis" value="Laki-laki">Laki-laki
-	<input required type="radio" name="jenis" value="Perempuan">Perempuan
-	<br/>
+		<tr>
+			<td>Alamat</td>
+			<td><input type="text" name="alamat"></td>
+		</tr>
 
-	Agama: 
-	<select name="agama">
-		<option>Islam</option>
-		<option>Protestan</option>
-		<option>Katolik</option>
-		<option>Hindu</option>
-		<option>Buddha</option>
-	</select>
-	<br/>
+		<tr>
+			<td>No.Telpon/HP</td>
+			<td><input type="number" name="nomor"></td>
+		</tr>
 
-	Jelaskan Keadaan Anda:
-	<textarea style="resize: none;" name="keadaan"></textarea>
-	<br/>
+		<tr>
+			<td>Jenis Kelamin</td>
+			<td>
+				<input required type="radio" name="jenis" value="Laki-laki">Laki-laki
+				<input required type="radio" name="jenis" value="Perempuan">Perempuan
+			</td>
+		</tr>
 
-	<input type="submit" value="Simpan" name="submit">
+		<tr>
+			<td>Pekerjaan</td>
+			<td><input type="text" name="pekerjaan"></td>
+		</tr>
+
+		<tr>
+			<td>Agama</td>
+			<td>
+				<select name="agama">
+					<option></option>
+					<option>Islam</option>
+					<option>Protestan</option>
+					<option>Katolik</option>
+					<option>Hindu</option>
+					<option>Buddha</option>
+				</select>
+			</td>
+
+		<tr>
+			<td>Status Pernikahan</td>
+			<td>
+				<select name="status">
+					<option></option>
+					<option>Belum Menikah</option>
+					<option>Sudah Menikah</option>
+				</select>
+			</td>	
+		</tr>
+
+		<tr>
+			<td>Kewarganegaraan</td>
+			<td><input type="text" name="warga"></td>
+
+		</tr>
+		<tr>
+			<td colspan="5" align="center"><input type="submit" value="Daftar" name="submit" id="tombol"></td>
+		</tr>
+		<tr>
+			<td colspan="5" align="center"><a href="tabel.php">Daftar Penduduk</a></td>
+		</tr>
+	</table>
 </form>
+		</div>
 </body>
 </html>
